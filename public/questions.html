@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Year Questions - EduPrep</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">StudyPeak</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="questions.html" class="active">Previous Year Questions</a></li>
+                <li><a href="topics.html">Important Topics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="timemanagement.html">Time Management</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Previous Year Questions</h1>
+                <p>Practice with real exam questions from previous years to strengthen your preparation</p>
+            </div>
+        </section>
+
+        <section class="questions-filter">
+            <div class="container">
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="year-filter">Year:</label>
+                        <select id="year-filter">
+                            <option value="all">All Years</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="exam-filter">Exam Type:</label>
+                        <select id="exam-filter">
+                            <option value="all">All Exams</option>
+                            <option value="midterm">Mid-term</option>
+                            <option value="final">Final</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="difficulty-filter">Difficulty:</label>
+                        <select id="difficulty-filter">
+                            <option value="all">All Levels</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" id="apply-filter">Apply Filter</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="questions-container">
+            <div class="container">
+                <div class="question-grid">
+                    <!-- Question Cards -->
+                    <div class="question-card">
+                        <div class="question-meta">
+                            <span>2023 • Mid-term Exam</span>
+                            <span class="difficulty easy">Easy</span>
+                        </div>
+                        <h4 class="question-title">Explain the difference between supervised and unsupervised learning in machine learning.</h4>
+                        <p class="question-preview">This question tests your understanding of fundamental machine learning concepts...</p>
+                        <div class="solution" style="display: none;">
+                            <h5>Solution:</h5>
+                            <p><strong>Supervised Learning:</strong> Uses labeled data where the algorithm learns to map inputs to known outputs. Examples: classification, regression.</p>
+                            <p><strong>Unsupervised Learning:</strong> Works with unlabeled data to find patterns or structure. Examples: clustering, dimensionality reduction.</p>
+                            <p>Key differences include input data type (labeled vs. unlabeled), the presence of output variables, and types of problems solved.</p>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-button show-solution">Show Solution</button>
+                            <button class="question-button">Similar Questions</button>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-meta">
+                            <span>2023 • Final Exam</span>
+                            <span class="difficulty medium">Medium</span>
+                        </div>
+                        <h4 class="question-title">Implement a function to determine if a binary tree is balanced.</h4>
+                        <p class="question-preview">A tree is balanced when the height of the two subtrees of any node never differ by more than one...</p>
+                        <div class="solution" style="display: none;">
+                            <h5>Solution:</h5>
+                            <pre><code>
+function isBalanced(root) {
+  if (!root) return true;
+  
+  function getHeight(node) {
+    if (!node) return 0;
+    
+    const leftHeight = getHeight(node.left);
+    if (leftHeight === -1) return -1;
+    
+    const rightHeight = getHeight(node.right);
+    if (rightHeight === -1) return -1;
+    
+    if (Math.abs(leftHeight - rightHeight) > 1) return -1;
+    
+    return Math.max(leftHeight, rightHeight) + 1;
+  }
+  
+  return getHeight(root) !== -1;
+}
+                            </code></pre>
+                            <p>This solution uses a bottom-up approach with O(n) time complexity.</p>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-button show-solution">Show Solution</button>
+                            <button class="question-button">Similar Questions</button>
+                        </div>
+                    </div>
+
+                    <div class="question-card">
+                        <div class="question-meta">
+                            <span>2022 • Final Exam</span>
+                            <span class="difficulty hard">Hard</span>
+                        </div>
+                        <h4 class="question-title">Implement a distributed system for processing large-scale data with fault tolerance.</h4>
+                        <p class="question-preview">Design a system that can process terabytes of data while handling node failures...</p>
+                        <div class="solution" style="display: none;">
+                            <h5>Solution:</h5>
+                            <p>A comprehensive solution would involve:</p>
+                            <ol>
+                                <li><strong>Data Partitioning:</strong> Divide data into chunks using consistent hashing</li>
+                                <li><strong>Replication:</strong> Store multiple copies across different nodes</li>
+                                <li><strong>Failure Detection:</strong> Implement heartbeat mechanism with timeout</li>
+                                <li><strong>Recovery Mechanism:</strong> Rebuild failed nodes from replicas</li>
+                                <li><strong>Processing Model:</strong> MapReduce or similar paradigm</li>
+                            </ol>
+                            <p>Technologies to consider: Apache Hadoop, Spark, or custom implementation with ZooKeeper for coordination.</p>
+                        </div>
+                        <div class="question-actions">
+                            <button class="question-button show-solution">Show Solution</button>
+                            <button class="question-button">Similar Questions</button>
+                        </div>
+                    </div>
+
+                    <!-- More question cards would be added here -->
+                </div>
+                
+                <div class="pagination">
+                    <button class="pagination-button active">1</button>
+                    <button class="pagination-button">2</button>
+                    <button class="pagination-button">3</button>
+                    <button class="pagination-button next">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

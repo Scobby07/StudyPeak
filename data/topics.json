@@ -1,0 +1,124 @@
+[
+  {
+    "id": "1",
+    "title": "Neural Networks",
+    "isAiRecommended": true,
+    "importanceLevel": "high",
+    "overview": "Neural networks are computing systems inspired by biological neural networks. They form the backbone of many modern AI applications and are essential to understand for any AI/ML exam.",
+    "keyConcepts": [
+      {
+        "name": "Neurons and Layers",
+        "description": "Understanding the basic building blocks and architecture"
+      },
+      {
+        "name": "Activation Functions",
+        "description": "Sigmoid, ReLU, tanh, and their characteristics"
+      },
+      {
+        "name": "Backpropagation",
+        "description": "How neural networks learn through gradient descent"
+      },
+      {
+        "name": "CNN, RNN, GAN",
+        "description": "Different types of neural network architectures"
+      }
+    ],
+    "examTips": "Questions often focus on backpropagation calculations, choosing appropriate activation functions, and recognizing which type of neural network fits specific problems.",
+    "relatedResources": [
+      {
+        "type": "video",
+        "title": "Neural Networks Explained Video",
+        "link": "resources.html#videos"
+      },
+      {
+        "type": "question",
+        "title": "Practice Questions",
+        "link": "questions.html"
+      },
+      {
+        "type": "note",
+        "title": "Lecture Notes",
+        "link": "resources.html#notes"
+      }
+    ],
+    "subject": "ai"
+  },
+  {
+    "id": "2",
+    "title": "Database Normalization",
+    "isAiRecommended": false,
+    "importanceLevel": "high",
+    "overview": "Database normalization is the process of structuring a database to reduce data redundancy and improve data integrity. This is a fundamental database concept tested in most exams.",
+    "keyConcepts": [
+      {
+        "name": "First Normal Form (1NF)",
+        "description": "Atomic values, no repeating groups"
+      },
+      {
+        "name": "Second Normal Form (2NF)",
+        "description": "1NF plus no partial dependencies"
+      },
+      {
+        "name": "Third Normal Form (3NF)",
+        "description": "2NF plus no transitive dependencies"
+      },
+      {
+        "name": "BCNF",
+        "description": "Boyce-Codd Normal Form and its applications"
+      }
+    ],
+    "examTips": "Expect questions asking you to identify the normal form of a given schema, normalize a table, or explain the benefits of normalization in specific scenarios.",
+    "relatedResources": [
+      {
+        "type": "ebook",
+        "title": "Database Design E-Book",
+        "link": "resources.html#ebooks"
+      },
+      {
+        "type": "question",
+        "title": "Practice Questions",
+        "link": "questions.html"
+      }
+    ],
+    "subject": "databases"
+  },
+  {
+    "id": "3",
+    "title": "Time Complexity Analysis",
+    "isAiRecommended": true,
+    "importanceLevel": "high",
+    "overview": "Time complexity analysis is fundamental to understanding algorithm efficiency. This topic appears in virtually every algorithms exam and technical interview.",
+    "keyConcepts": [
+      {
+        "name": "Big O Notation",
+        "description": "Understanding O(1), O(log n), O(n), O(n log n), O(n²), etc."
+      },
+      {
+        "name": "Asymptotic Analysis",
+        "description": "Best, worst, and average case scenarios"
+      },
+      {
+        "name": "Common Algorithms",
+        "description": "Sorting, searching, and their complexities"
+      },
+      {
+        "name": "Space Complexity",
+        "description": "Memory utilization analysis"
+      }
+    ],
+    "examTips": "Focus on calculating the time complexity of given code snippets and comparing the efficiency of different algorithms for the same problem.",
+    "relatedResources": [
+      {
+        "type": "video",
+        "title": "Algorithm Analysis Video Series",
+        "link": "resources.html#videos"
+      },
+      {
+        "type": "note",
+        "title": "Complexity Cheat Sheet",
+        "link": "resources.html#notes"
+      }
+    ],
+    "subject": "algorithms"
+  }
+]

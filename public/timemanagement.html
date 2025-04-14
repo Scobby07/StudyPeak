@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management - EduPrep</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">StudyPeak</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="questions.html">Previous Year Questions</a></li>
+                <li><a href="topics.html">Important Topics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="timemanagement.html" class="active">Time Management</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Time Management</h1>
+                <p>Optimize your study schedule and prepare efficiently for your exams</p>
+            </div>
+        </section>
+
+        <section class="time-management-intro">
+            <div class="container">
+                <div class="intro-content">
+                    <h2>Why Time Management Matters</h2>
+                    <p>Effective time management is crucial for academic success. By allocating appropriate study time to different subjects based on their complexity and importance, you can maximize your learning efficiency and reduce exam stress.</p>
+                    <div class="intro-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">83%</div>
+                            <div class="stat-text">of top performers use structured study plans</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2.5x</div>
+                            <div class="stat-text">more information retained with spaced learning</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">40%</div>
+                            <div class="stat-text">reduction in exam anxiety with proper preparation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="time-allocation">
+            <div class="container">
+                <h2>Recommended Study Allocation</h2>
+                <p>Based on topic importance and complexity, we recommend the following time allocation for your preparation:</p>
+                
+                <div class="time-blocks">
+                    <div class="time-block">
+                        <div class="time-subject">
+                            <span class="subject-color ai-blue"></span>
+                            <span>Neural Networks</span>
+                        </div>
+                        <div class="time-hours">10h</div>
+                        <div class="priority-level">High</div>
+                    </div>
+                    
+                    <div class="time-block">
+                        <div class="time-subject">
+                            <span class="subject-color db-green"></span>
+                            <span>Database Normalization</span>
+                        </div>
+                        <div class="time-hours">8h</div>
+                        <div class="priority-level">High</div>
+                    </div>
+                    
+                    <div class="time-block">
+                        <div class="time-subject">
+                            <span class="subject-color algo-purple"></span>
+                            <span>Time Complexity Analysis</span>
+                        </div>
+                        <div class="time-hours">7h</div>
+                        <div class="priority-level">High</div>
+                    </div>
+                    
+                    <div class="time-block">
+                        <div class="time-subject">
+                            <span class="subject-color design-orange"></span>
+                            <span>Design Patterns</span>
+                        </div>
+                        <div class="time-hours">6h</div>
+                        <div class="priority-level">Medium</div>
+                    </div>
+                    
+                    <div class="time-block">
+                        <div class="time-subject">
+                            <span class="subject-color network-teal"></span>
+                            <span>Computer Networks</span>
+                        </div>
+                        <div class="time-hours">5h</div>
+                        <div class="priority-level">Medium</div>
+                    </div>
+                    
+                    <div class="time-block">
+                        <div class="time-subject">
+                            <span class="subject-color security-red"></span>
+                            <span>Cybersecurity Principles</span>
+                        </div>
+                        <div class="time-hours">4h</div>
+                        <div class="priority-level">Medium</div>
+                    </div>
+                </div>
+                
+                <div class="time-allocation-chart">
+                    <h3>Visual Breakdown</h3>
+                    <div class="chart-container">
+                        <div class="placeholder-chart">
+                            <div class="chart-segment ai-blue" style="width: 25%"></div>
+                            <div class="chart-segment db-green" style="width: 20%"></div>
+                            <div class="chart-segment algo-purple" style="width: 17.5%"></div>
+                            <div class="chart-segment design-orange" style="width: 15%"></div>
+                            <div class="chart-segment network-teal" style="width: 12.5%"></div>
+                            <div class="chart-segment security-red" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-plans">
+            <div class="container">
+                <h2>Study Plans</h2>
+                <div class="plan-tabs">
+                    <button class="plan-tab active" data-plan="4-week">4-Week Plan</button>
+                    <button class="plan-tab" data-plan="2-week">2-Week Plan</button>
+                    <button class="plan-tab" data-plan="1-week">1-Week Plan</button>
+                </div>
+                
+                <div class="plan-content active" id="4-week-plan">
+                    <div class="plan-description">
+                        <p>This comprehensive 4-week plan helps you prepare thoroughly with adequate time for revision and practice.</p>
+                    </div>
+                    <div class="weekly-plan">
+                        <div class="week">
+                            <h3>Week 1: Fundamentals</h3>
+                            <ul class="plan-activities">
+                                <li><strong>Monday-Tuesday:</strong> Neural Networks basics</li>
+                                <li><strong>Wednesday-Thursday:</strong> Database Concepts</li>
+                                <li><strong>Friday:</strong> Time Complexity basics</li>
+                                <li><strong>Weekend:</strong> Review and practice questions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="week">
+                            <h3>Week 2: Advanced Concepts</h3>
+                            <ul class="plan-activities">
+                                <li><strong>Monday-Tuesday:</strong> Advanced Neural Networks</li>
+                                <li><strong>Wednesday:</strong> Database Normalization</li>
+                                <li><strong>Thursday-Friday:</strong> Design Patterns</li>
+                                <li><strong>Weekend:</strong> Practice and implementation exercises</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="week">
+                            <h3>Week 3: Additional Topics</h3>
+                            <ul class="plan-activities">
+                                <li><strong>Monday:</strong> Algorithm Analysis</li>
+                                <li><strong>Tuesday-Wednesday:</strong> Computer Networks</li>
+                                <li><strong>Thursday-Friday:</strong> Cybersecurity</li>
+                                <li><strong>Weekend:</strong> Practice tests and question solving</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="week">
+                            <h3>Week 4: Revision & Practice</h3>
+                            <ul class="plan-activities">
+                                <li><strong>Monday-Tuesday:</strong> High priority topics revision</li>
+                                <li><strong>Wednesday-Thursday:</strong> Medium priority topics revision</li>
+                                <li><strong>Friday:</strong> Mock exam</li>
+                                <li><strong>Weekend:</strong> Final review and rest</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plan-content" id="2-week-plan" style="display: none;">
+                    <div class="plan-description">
+                        <p>This accelerated 2-week plan focuses on the highest priority topics with intensive daily study sessions.</p>
+                    </div>
+                    <div class="weekly-plan">
+                        <div class="week">
+                            <h3>Week 1: Core Topics</h3>
+                            <ul class="plan-activities">
+                                <li><strong>Monday:</strong> Neural Networks & Deep Learning</li>
+                                <li><strong>Tuesday:</strong> Database Design & Normalization</li>
+                                <li><strong>Wednesday:</strong> Algorithm Analysis & Time Complexity</li>
+                                <li><strong>Thursday:</strong> Design Patterns</li>
+                                <li><strong>Friday:</strong> Computer Networks</li>
+                                <li><strong>Weekend:</strong> Mid-preparation test and review</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="week">
+                            <h3>Week 2: Practice & Refinement</h3>
+                            <ul class="plan-activities">
+                                <li><strong>Monday-Tuesday:</strong> Practice high priority topics</li>
+                                <li><strong>Wednesday-Thursday:</strong> Practice medium priority topics</li>
+                                <li><strong>Friday:</strong> Mock exam</li>
+                                <li><strong>Weekend:</strong> Review weak areas and rest</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="plan-content" id="1-week-plan" style="display: none;">
+                    <div class="plan-description">
+                        <p>This emergency 1-week plan focuses only on the most critical topics for last-minute preparation.</p>
+                    </div>
+                    <div class="weekly-plan">
+                        <div class="week">
+                            <h3>7-Day Intensive Plan</h3>
+                            <ul class="plan-activities">
+                                <li><strong>Day 1:</strong> Neural Networks core concepts (6 hours)</li>
+                                <li><strong>Day 2:</strong> Database Normalization (5 hours)</li>
+                                <li><strong>Day 3:</strong> Time Complexity & Algorithm Analysis (4 hours)</li>
+                                <li><strong>Day 4:</strong> Design Patterns essentials (4 hours)</li>
+                                <li><strong>Day 5:</strong> Quick review of remaining topics (4 hours)</li>
+                                <li><strong>Day 6:</strong> Practice tests and problem solving (5 hours)</li>
+                                <li><strong>Day 7:</strong> Final review of weak areas (3 hours) + Rest</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-plan">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Download Study Plan</a>
+                    <a href="#" class="btn btn-outline">Customize Plan</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="study-tips">
+            <div class="container">
+                <h2>Effective Study Strategies</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Spaced Repetition</h3>
+                        <p>Review material at increasing intervals to improve long-term retention. Use this technique especially for difficult concepts.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="fas fa-tasks"></i></div>
+                        <h3>Pomodoro Technique</h3>
+                        <p>Study in focused 25-minute intervals with short breaks in between to maintain high productivity and avoid burnout.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="fas fa-book-reader"></i></div>
+                        <h3>Active Recall</h3>
+                        <p>Test yourself regularly rather than passively rereading material. Create flashcards or practice questions.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="fas fa-pencil-alt"></i></div>
+                        <h3>Teach to Learn</h3>
+                        <p>Explain concepts in your own words as if teaching someone else to solidify your understanding.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

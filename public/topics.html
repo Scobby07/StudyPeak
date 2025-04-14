@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Topics - EduPrep</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">StudyPeak</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="questions.html">Previous Year Questions</a></li>
+                <li><a href="topics.html" class="active">Important Topics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="timemanagement.html">Time Management</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Important Topics</h1>
+                <p>Focus on high-priority topics that are frequently covered in exams</p>
+            </div>
+        </section>
+
+        <section class="topics-filter">
+            <div class="container">
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="subject-filter">Subject:</label>
+                        <select id="subject-filter">
+                            <option value="all">All Subjects</option>
+                            <option value="algorithms">Algorithms</option>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="databases">Databases</option>
+                            <option value="networking">Computer Networks</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priority-filter">Priority:</label>
+                        <select id="priority-filter">
+                            <option value="all">All Priorities</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" id="apply-topic-filter">Apply Filter</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search topics..." id="topic-search">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="topics-container">
+            <div class="container">
+                <div class="topics-grid">
+                    <div class="topic-guide">
+                        <h2 class="topic-title">Neural Networks</h2>
+                        <div class="topic-importance">
+                            <span class="ai-recommended">AI Recommended</span>
+                            <span class="importance-level high">High Priority</span>
+                        </div>
+                        
+                        <div class="topic-overview">
+                            <h3>Overview</h3>
+                            <p>Neural networks are computing systems inspired by biological neural networks. They form the backbone of many modern AI applications and are essential to understand for any AI/ML exam.</p>
+                        </div>
+                        
+                        <div class="key-concepts">
+                            <h3>Key Concepts</h3>
+                            <ul>
+                                <li><strong>Neurons and Layers:</strong> Understanding the basic building blocks and architecture</li>
+                                <li><strong>Activation Functions:</strong> Sigmoid, ReLU, tanh, and their characteristics</li>
+                                <li><strong>Backpropagation:</strong> How neural networks learn through gradient descent</li>
+                                <li><strong>CNN, RNN, GAN:</strong> Different types of neural network architectures</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="exam-tips">
+                            <h3>Exam Tips</h3>
+                            <p>Questions often focus on backpropagation calculations, choosing appropriate activation functions, and recognizing which type of neural network fits specific problems.</p>
+                        </div>
+                        
+                        <div class="related-resources">
+                            <h3>Related Resources</h3>
+                            <div class="resource-links">
+                                <a href="resources.html#videos" class="resource-link" target="_blank">
+                                    <i class="fas fa-video"></i>
+                                    <span>Neural Networks Explained Video</span>
+                                </a>
+                                <a href="questions.html" class="resource-link" target="_blank">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Practice Questions</span>
+                                </a>
+                                <a href="resources.html#notes" class="resource-link" target="_blank">
+                                    <i class="fas fa-sticky-note"></i>
+                                    <span>Lecture Notes</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-guide">
+                        <h2 class="topic-title">Database Normalization</h2>
+                        <div class="topic-importance">
+                            <span class="importance-level high">High Priority</span>
+                        </div>
+                        
+                        <div class="topic-overview">
+                            <h3>Overview</h3>
+                            <p>Database normalization is the process of structuring a database to reduce data redundancy and improve data integrity. This is a fundamental database concept tested in most exams.</p>
+                        </div>
+                        
+                        <div class="key-concepts">
+                            <h3>Key Concepts</h3>
+                            <ul>
+                                <li><strong>First Normal Form (1NF):</strong> Atomic values, no repeating groups</li>
+                                <li><strong>Second Normal Form (2NF):</strong> 1NF plus no partial dependencies</li>
+                                <li><strong>Third Normal Form (3NF):</strong> 2NF plus no transitive dependencies</li>
+                                <li><strong>BCNF:</strong> Boyce-Codd Normal Form and its applications</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="exam-tips">
+                            <h3>Exam Tips</h3>
+                            <p>Expect questions asking you to identify the normal form of a given schema, normalize a table, or explain the benefits of normalization in specific scenarios.</p>
+                        </div>
+                        
+                        <div class="related-resources">
+                            <h3>Related Resources</h3>
+                            <div class="resource-links">
+                                <a href="resources.html#ebooks" class="resource-link" target="_blank">
+                                    <i class="fas fa-book"></i>
+                                    <span>Database Design E-Book</span>
+                                </a>
+                                <a href="questions.html" class="resource-link" target="_blank">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Practice Questions</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-guide">
+                        <h2 class="topic-title">Time Complexity Analysis</h2>
+                        <div class="topic-importance">
+                            <span class="ai-recommended">AI Recommended</span>
+                            <span class="importance-level high">High Priority</span>
+                        </div>
+                        
+                        <div class="topic-overview">
+                            <h3>Overview</h3>
+                            <p>Time complexity analysis is fundamental to understanding algorithm efficiency. This topic appears in virtually every algorithms exam and technical interview.</p>
+                        </div>
+                        
+                        <div class="key-concepts">
+                            <h3>Key Concepts</h3>
+                            <ul>
+                                <li><strong>Big O Notation:</strong> Understanding O(1), O(log n), O(n), O(n log n), O(n²), etc.</li>
+                                <li><strong>Asymptotic Analysis:</strong> Best, worst, and average case scenarios</li>
+                                <li><strong>Common Algorithms:</strong> Sorting, searching, and their complexities</li>
+                                <li><strong>Space Complexity:</strong> Memory utilization analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="exam-tips">
+                            <h3>Exam Tips</h3>
+                            <p>Focus on calculating the time complexity of given code snippets and comparing the efficiency of different algorithms for the same problem.</p>
+                        </div>
+                        
+                        <div class="related-resources">
+                            <h3>Related Resources</h3>
+                            <div class="resource-links">
+                                <a href="resources.html#videos" class="resource-link" target="_blank">
+                                    <i class="fas fa-video"></i>
+                                    <span>Algorithm Analysis Video Series</span>
+                                </a>
+                                <a href="resources.html#notes" class="resource-link" target="_blank">
+                                    <i class="fas fa-sticky-note"></i>
+                                    <span>Complexity Cheat Sheet</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topic-guide">
+                        <h2 class="topic-title">Design Patterns</h2>
+                        <div class="topic-importance">
+                            <span class="importance-level medium">Medium Priority</span>
+                        </div>
+                        
+                        <div class="topic-overview">
+                            <h3>Overview</h3>
+                            <p>Design patterns are typical solutions to common problems in software design. They represent best practices evolved over time by experienced software developers.</p>
+                        </div>
+                        
+                        <div class="key-concepts">
+                            <h3>Key Concepts</h3>
+                            <ul>
+                                <li><strong>Creational Patterns:</strong> Singleton, Factory, Builder, Prototype</li>
+                                <li><strong>Structural Patterns:</strong> Adapter, Bridge, Composite, Decorator</li>
+                                <li><strong>Behavioral Patterns:</strong> Observer, Strategy, Command, Iterator</li>
+                                <li><strong>MVC Pattern:</strong> Model-View-Controller architecture</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="exam-tips">
+                            <h3>Exam Tips</h3>
+                            <p>Practice identifying which pattern is appropriate for specific scenarios and understanding the trade-offs between different patterns.</p>
+                        </div>
+                        
+                        <div class="related-resources">
+                            <h3>Related Resources</h3>
+                            <div class="resource-links">
+                                <a href="resources.html#ebooks" class="resource-link" target="_blank">
+                                    <i class="fas fa-book"></i>
+                                    <span>Design Patterns E-Book</span>
+                                </a>
+                                <a href="resources.html#videos" class="resource-link" target="_blank">
+                                    <i class="fas fa-video"></i>
+                                    <span>Pattern Implementation Videos</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

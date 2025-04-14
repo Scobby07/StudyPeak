@@ -1,0 +1,15 @@
+Since we cannot directly create binary image files, you'll need to add placeholder images in the following locations:
+
+1. Video thumbnails:
+   - c:\Users\Asus\Desktop\ed\public\images\video-thumbnail-1.jpg
+   - c:\Users\Asus\Desktop\ed\public\images\video-thumbnail-2.jpg
+   - c:\Users\Asus\Desktop\ed\public\images\video-thumbnail-3.jpg
+   - c:\Users\Asus\Desktop\ed\public\images\video-thumbnail-4.jpg
+
+2. E-book covers:
+   - c:\Users\Asus\Desktop\ed\public\images\ebook-cover-1.jpg
+   - c:\Users\Asus\Desktop\ed\public\images\ebook-cover-2.jpg
+   - c:\Users\Asus\Desktop\ed\public\images\ebook-cover-3.jpg
+   - c:\Users\Asus\Desktop\ed\public\images\ebook-cover-4.jpg
+
+You can create these using any image editing software or download placeholders from sites like Unsplash or Pexels.

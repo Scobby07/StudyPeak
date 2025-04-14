@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "year": "2023",
+    "examType": "Mid-term",
+    "difficulty": "easy",
+    "title": "Explain the difference between supervised and unsupervised learning in machine learning.",
+    "preview": "This question tests your understanding of fundamental machine learning concepts...",
+    "solution": "<p><strong>Supervised Learning:</strong> Uses labeled data where the algorithm learns to map inputs to known outputs. Examples: classification, regression.</p><p><strong>Unsupervised Learning:</strong> Works with unlabeled data to find patterns or structure. Examples: clustering, dimensionality reduction.</p><p>Key differences include input data type (labeled vs. unlabeled), the presence of output variables, and types of problems solved.</p>"
+  },
+  {
+    "id": "2",
+    "year": "2023",
+    "examType": "Final",
+    "difficulty": "medium",
+    "title": "Implement a function to determine if a binary tree is balanced.",
+    "preview": "A tree is balanced when the height of the two subtrees of any node never differ by more than one...",
+    "solution": "<h5>Solution:</h5><pre><code>function isBalanced(root) {\n  if (!root) return true;\n  \n  function getHeight(node) {\n    if (!node) return 0;\n    \n    const leftHeight = getHeight(node.left);\n    if (leftHeight === -1) return -1;\n    \n    const rightHeight = getHeight(node.right);\n    if (rightHeight === -1) return -1;\n    \n    if (Math.abs(leftHeight - rightHeight) > 1) return -1;\n    \n    return Math.max(leftHeight, rightHeight) + 1;\n  }\n  \n  return getHeight(root) !== -1;\n}</code></pre><p>This solution uses a bottom-up approach with O(n) time complexity.</p>"
+  },
+  {
+    "id": "3",
+    "year": "2022",
+    "examType": "Final",
+    "difficulty": "hard",
+    "title": "Implement a distributed system for processing large-scale data with fault tolerance.",
+    "preview": "Design a system that can process terabytes of data while handling node failures...",
+    "solution": "<h5>Solution:</h5><p>A comprehensive solution would involve:</p><ol><li><strong>Data Partitioning:</strong> Divide data into chunks using consistent hashing</li><li><strong>Replication:</strong> Store multiple copies across different nodes</li><li><strong>Failure Detection:</strong> Implement heartbeat mechanism with timeout</li><li><strong>Recovery Mechanism:</strong> Rebuild failed nodes from replicas</li><li><strong>Processing Model:</strong> MapReduce or similar paradigm</li></ol><p>Technologies to consider: Apache Hadoop, Spark, or custom implementation with ZooKeeper for coordination.</p>"
+  },
+  {
+    "year": "2025",
+    "examType": "Final",
+    "difficulty": "medium",
+    "title": "What is algorithm?",
+    "preview": "learn algorithm\n",
+    "solution": "algorithm",
+    "id": "1743416085745"
+  }
+]

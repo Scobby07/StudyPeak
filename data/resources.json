@@ -1,0 +1,108 @@
+{
+  "videos": [
+    {
+      "title": "Introduction to Data Structures",
+      "instructor": "Prof. Sarah Johnson",
+      "thumbnail": "https://i.ytimg.com/vi/xLetJpcjHS0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDlsDOdrWHbBFAB-lUllP__3eH3nA",
+      "duration": "11:17",
+      "url": "https://youtu.be/xLetJpcjHS0?si=CRNnXL9bZWemz55-",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "Machine Learning Fundamentals",
+      "instructor": "Dr. Michael Chen",
+      "thumbnail": "images/video-thumbnail-2.jpg",
+      "duration": "32:17",
+      "url": "#"
+    },
+    {
+      "id": "3",
+      "title": "Software Engineering Best Practices",
+      "instructor": "Prof. David Miller",
+      "thumbnail": "images/video-thumbnail-3.jpg",
+      "duration": "24:05",
+      "url": "#"
+    },
+    {
+      "id": "4",
+      "title": "Database Design and Normalization",
+      "instructor": "Dr. Lisa Wong",
+      "thumbnail": "images/video-thumbnail-4.jpg",
+      "duration": "41:30",
+      "url": "#"
+    }
+  ],
+  "notes": [
+    {
+      "id": "1",
+      "title": "Algorithms and Complexity",
+      "pages": 35,
+      "lastUpdated": "2 months ago",
+      "description": "Comprehensive notes on algorithm analysis, complexity theory, and common algorithms.",
+      "previewUrl": "#",
+      "downloadUrl": "#"
+    },
+    {
+      "id": "2",
+      "title": "Object-Oriented Programming",
+      "pages": 42,
+      "lastUpdated": "1 month ago",
+      "description": "Covers OOP principles, design patterns, and best practices with examples.",
+      "previewUrl": "#",
+      "downloadUrl": "#"
+    },
+    {
+      "id": "3",
+      "title": "Computer Networks",
+      "pages": 28,
+      "lastUpdated": "3 weeks ago",
+      "description": "Study material on network protocols, architecture, and security concepts.",
+      "previewUrl": "#",
+      "downloadUrl": "#"
+    },
+    {
+      "id": "4",
+      "title": "Artificial Intelligence Basics",
+      "pages": 53,
+      "lastUpdated": "1 week ago",
+      "description": "Introduction to AI concepts, machine learning algorithms, and neural networks.",
+      "previewUrl": "#",
+      "downloadUrl": "#"
+    }
+  ],
+  "ebooks": [
+    {
+      "id": "1",
+      "title": "Data Science Handbook",
+      "authors": "John Smith & Sarah Johnson",
+      "cover": "images/ebook-cover-1.jpg",
+      "description": "A comprehensive guide to data science concepts and applications.",
+      "readUrl": "#"
+    },
+    {
+      "id": "2",
+      "title": "Advanced Algorithms and Data Structures",
+      "authors": "Dr. Michael Chen",
+      "cover": "images/ebook-cover-2.jpg",
+      "description": "In-depth exploration of complex algorithms and their implementations.",
+      "readUrl": "#"
+    },
+    {
+      "id": "3",
+      "title": "Modern Web Development",
+      "authors": "David Miller & Lisa Wong",
+      "cover": "images/ebook-cover-3.jpg",
+      "description": "Learn front-end and back-end web development technologies.",
+      "readUrl": "#"
+    },
+    {
+      "id": "4",
+      "title": "AI and Deep Learning",
+      "authors": "Prof. Robert Johnson",
+      "cover": "images/ebook-cover-4.jpg",
+      "description": "Explore neural networks, deep learning architectures, and AI applications.",
+      "readUrl": "#"
+    }
+  ]
+}

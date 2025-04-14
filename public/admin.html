@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - EduPrep</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">StudyPeak</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="questions.html">Previous Year Questions</a></li>
+                <li><a href="topics.html">Important Topics</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="timemanagement.html">Time Management</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Admin Dashboard</h1>
+                <p>Manage content for the EduPrep platform</p>
+            </div>
+        </section>
+
+        <section class="admin-content">
+            <div class="container">
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-content="questions">Questions</button>
+                    <button class="admin-tab" data-content="topics">Topics</button>
+                    <button class="admin-tab" data-content="resources">Resources</button>
+                    <button class="admin-tab" data-content="timemanagement">Time Management</button>
+                </div>
+
+                <!-- Questions Management -->
+                <div class="admin-panel active" id="questions-panel">
+                    <h2>Manage Questions</h2>
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" id="add-question">Add New Question</button>
+                    </div>
+                    
+                    <div class="admin-form" id="question-form" style="display: none;">
+                        <h3>Add/Edit Question</h3>
+                        <form id="question-editor">
+                            <input type="hidden" id="question-id">
+                            <div class="form-group">
+                                <label for="question-year">Year</label>
+                                <input type="text" id="question-year" required placeholder="e.g. 2023">
+                            </div>
+                            <div class="form-group">
+                                <label for="question-exam-type">Exam Type</label>
+                                <select id="question-exam-type" required>
+                                    <option value="Mid-term">Mid-term</option>
+                                    <option value="Final">Final</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="question-difficulty">Difficulty</label>
+                                <select id="question-difficulty" required>
+                                    <option value="easy">Easy</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="hard">Hard</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="question-title">Question Title</label>
+                                <input type="text" id="question-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question-preview">Preview Text</label>
+                                <textarea id="question-preview" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="question-solution">Solution (HTML allowed)</label>
+                                <textarea id="question-solution" required rows="8"></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Save Question</button>
+                                <button type="button" class="btn btn-outline" id="cancel-question">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="admin-table">
+                        <table id="questions-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Exam Type</th>
+                                    <th>Difficulty</th>
+                                    <th>Title</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Questions will be loaded here dynamically -->
+                            </tbody>
+                        </table>
+                        <div id="questions-loading">Loading questions...</div>
+                        <div id="no-questions" style="display: none;">No questions found. Add one now!</div>
+                    </div>
+                </div>
+
+                <!-- Topics Management -->
+                <div class="admin-panel" id="topics-panel" style="display: none;">
+                    <h2>Manage Topics</h2>
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" id="add-topic">Add New Topic</button>
+                    </div>
+                    
+                    <div class="admin-form" id="topic-form" style="display: none;">
+                        <h3>Add/Edit Topic</h3>
+                        <form id="topic-editor">
+                            <input type="hidden" id="topic-id">
+                            <div class="form-group">
+                                <label for="topic-title">Topic Title</label>
+                                <input type="text" id="topic-title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="topic-subject">Subject</label>
+                                <select id="topic-subject" required>
+                                    <option value="algorithms">Algorithms</option>
+                                    <option value="ai">Artificial Intelligence</option>
+                                    <option value="databases">Databases</option>
+                                    <option value="networking">Computer Networks</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="topic-importance">Importance Level</label>
+                                <select id="topic-importance" required>
+                                    <option value="high">High</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="low">Low</option>
+                                </select>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="topic-ai-recommended">
+                                <label for="topic-ai-recommended">AI Recommended</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="topic-overview">Overview</label>
+                                <textarea id="topic-overview" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Key Concepts</label>
+                                <div id="concept-container">
+                                    <div class="concept-item">
+                                        <input type="text" class="concept-name" placeholder="Concept Name" required>
+                                        <input type="text" class="concept-desc" placeholder="Description" required>
+                                        <button type="button" class="btn-remove-concept"><i class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-small" id="add-concept">Add Concept</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="topic-exam-tips">Exam Tips</label>
+                                <textarea id="topic-exam-tips" required></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Save Topic</button>
+                                <button type="button" class="btn btn-outline" id="cancel-topic">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="admin-table">
+                        <table id="topics-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Subject</th>
+                                    <th>Importance</th>
+                                    <th>AI Recommended</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Topics will be loaded here dynamically -->
+                            </tbody>
+                        </table>
+                        <div id="topics-loading">Loading topics...</div>
+                        <div id="no-topics" style="display: none;">No topics found. Add one now!</div>
+                    </div>
+                </div>
+
+                <!-- Resources Management -->
+                <div class="admin-panel" id="resources-panel" style="display: none;">
+                    <h2>Manage Resources</h2>
+                    
+                    <!-- Videos Section -->
+                    <div class="resource-category">
+                        <h3>Videos</h3>
+                        <div class="admin-actions">
+                            <button class="btn btn-primary" id="add-video">Add New Video</button>
+                        </div>
+                        
+                        <!-- Video Form -->
+                        <div class="admin-form" id="video-form" style="display: none;">
+                            <h3>Add/Edit Video</h3>
+                            <form id="video-editor">
+                                <input type="hidden" id="video-id">
+                                <div class="form-group">
+                                    <label for="video-title">Title</label>
+                                    <input type="text" id="video-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="video-instructor">Instructor</label>
+                                    <input type="text" id="video-instructor" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="video-thumbnail">Thumbnail URL</label>
+                                    <input type="text" id="video-thumbnail" placeholder="images/video-thumbnail.jpg" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="video-duration">Duration</label>
+                                    <input type="text" id="video-duration" placeholder="e.g. 18:45" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="video-url">Video URL</label>
+                                    <input type="text" id="video-url" placeholder="URL or # for placeholder" required>
+                                </div>
+                                <div class="form-buttons">
+                                    <button type="submit" class="btn btn-primary">Save Video</button>
+                                    <button type="button" class="btn btn-outline" id="cancel-video">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="admin-table">
+                            <table id="videos-table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Instructor</th>
+                                        <th>Duration</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Videos will be loaded here dynamically -->
+                                </tbody>
+                            </table>
+                            <div id="videos-loading">Loading videos...</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Notes Section -->
+                    <div class="resource-category">
+                        <h3>Notes</h3>
+                        <div class="admin-actions">
+                            <button class="btn btn-primary" id="add-note">Add New Note</button>
+                        </div>
+                        
+                        <!-- Note Form -->
+                        <div class="admin-form" id="note-form" style="display: none;">
+                            <h3>Add/Edit Note</h3>
+                            <form id="note-editor">
+                                <input type="hidden" id="note-id">
+                                <div class="form-group">
+                                    <label for="note-title">Title</label>
+                                    <input type="text" id="note-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="note-pages">Number of Pages</label>
+                                    <input type="number" id="note-pages" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="note-updated">Last Updated</label>
+                                    <input type="text" id="note-updated" placeholder="e.g. 2 months ago" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="note-description">Description</label>
+                                    <textarea id="note-description" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="note-preview-url">Preview URL</label>
+                                    <input type="text" id="note-preview-url" placeholder="URL or # for placeholder" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="note-download-url">Download URL</label>
+                                    <input type="text" id="note-download-url" placeholder="URL or # for placeholder" required>
+                                </div>
+                                <div class="form-buttons">
+                                    <button type="submit" class="btn btn-primary">Save Note</button>
+                                    <button type="button" class="btn btn-outline" id="cancel-note">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="admin-table">
+                            <table id="notes-table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Pages</th>
+                                        <th>Last Updated</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Notes will be loaded here dynamically -->
+                                </tbody>
+                            </table>
+                            <div id="notes-loading">Loading notes...</div>
+                        </div>
+                    </div>
+                    
+                    <!-- E-Books Section -->
+                    <div class="resource-category">
+                        <h3>E-Books</h3>
+                        <div class="admin-actions">
+                            <button class="btn btn-primary" id="add-ebook">Add New E-Book</button>
+                        </div>
+                        
+                        <!-- E-Book Form -->
+                        <div class="admin-form" id="ebook-form" style="display: none;">
+                            <h3>Add/Edit E-Book</h3>
+                            <form id="ebook-editor">
+                                <input type="hidden" id="ebook-id">
+                                <div class="form-group">
+                                    <label for="ebook-title">Title</label>
+                                    <input type="text" id="ebook-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ebook-authors">Author(s)</label>
+                                    <input type="text" id="ebook-authors" placeholder="e.g. John Smith & Sarah Johnson" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ebook-cover">Cover Image URL</label>
+                                    <input type="text" id="ebook-cover" placeholder="images/ebook-cover.jpg" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ebook-description">Description</label>
+                                    <textarea id="ebook-description" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ebook-read-url">Read URL</label>
+                                    <input type="text" id="ebook-read-url" placeholder="URL or # for placeholder" required>
+                                </div>
+                                <div class="form-buttons">
+                                    <button type="submit" class="btn btn-primary">Save E-Book</button>
+                                    <button type="button" class="btn btn-outline" id="cancel-ebook">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="admin-table">
+                            <table id="ebooks-table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Author(s)</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- E-Books will be loaded here dynamically -->
+                                </tbody>
+                            </table>
+                            <div id="ebooks-loading">Loading e-books...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Management Data -->
+                <div class="admin-panel" id="timemanagement-panel" style="display: none;">
+                    <h2>Manage Time Management Data</h2>
+                    
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" id="save-time-data">Save Changes</button>
+                    </div>
+                    
+                    <div class="admin-section">
+                        <h3>Statistics</h3>
+                        <div id="stats-editor">
+                            <div class="stat-item-editor">
+                                <input type="text" class="stat-value" placeholder="Value (e.g. 83%)">
+                                <input type="text" class="stat-desc" placeholder="Description">
+                                <button class="remove-stat"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                        <button class="btn btn-small" id="add-stat">Add Statistic</button>
+                    </div>
+                    
+                    <div class="admin-section">
+                        <h3>Study Time Allocation</h3>
+                        <div id="time-allocation-editor">
+                            <div class="time-item-editor">
+                                <input type="text" class="subject-name" placeholder="Subject">
+                                <select class="color-class">
+                                    <option value="ai-blue">Blue (AI)</option>
+                                    <option value="db-green">Green (Database)</option>
+                                    <option value="algo-purple">Purple (Algorithms)</option>
+                                    <option value="design-orange">Orange (Design)</option>
+                                    <option value="network-teal">Teal (Network)</option>
+                                    <option value="security-red">Red (Security)</option>
+                                </select>
+                                <input type="number" class="hours" placeholder="Hours" min="1">
+                                <select class="priority">
+                                    <option value="High">High</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Low">Low</option>
+                                </select>
+                                <button class="remove-time-item"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                        <button class="btn btn-small" id="add-time-item">Add Subject</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

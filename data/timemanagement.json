@@ -1,0 +1,66 @@
+{
+  "stats": [
+    {
+      "value": "83%",
+      "description": "of top performers use structured study plans"
+    },
+    {
+      "value": "2.5x",
+      "description": "more information retained with spaced learning"
+    },
+    {
+      "value": "40%",
+      "description": "reduction in exam anxiety with proper preparation"
+    }
+  ],
+  "timeAllocation": [
+    {
+      "id": "1",
+      "subject": "Neural Networks",
+      "colorClass": "ai-blue",
+      "hours": 10,
+      "priority": "High",
+      "chartPercentage": 25
+    },
+    {
+      "id": "2",
+      "subject": "Database Normalization",
+      "colorClass": "db-green",
+      "hours": 8,
+      "priority": "High",
+      "chartPercentage": 20
+    },
+    {
+      "id": "3",
+      "subject": "Time Complexity Analysis",
+      "colorClass": "algo-purple",
+      "hours": 7,
+      "priority": "High",
+      "chartPercentage": 17.5
+    },
+    {
+      "id": "4",
+      "subject": "Design Patterns",
+      "colorClass": "design-orange",
+      "hours": 6,
+      "priority": "Medium",
+      "chartPercentage": 15
+    },
+    {
+      "id": "5",
+      "subject": "Computer Networks",
+      "colorClass": "network-teal",
+      "hours": 5,
+      "priority": "Medium",
+      "chartPercentage": 12.5
+    },
+    {
+      "id": "6",
+      "subject": "Cybersecurity Principles",
+      "colorClass": "security-red",
+      "hours": 4,
+      "priority": "Medium",
+      "chartPercentage": 10
+    }
+  ]
+}
